@@ -111,7 +111,11 @@ public class EmployeeTest {
         Staff.add(emp1);
 
         String expected = "Karl";
-        emp1.changeEname();
+        emp1.changeEname("Karl");
+
+        String actual = emp1.getEname();
+
+        assertEquals(expected, actual);
     }
 
 }

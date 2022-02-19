@@ -42,5 +42,8 @@ public class Employeein {
          Fname = name;
     }
 
+    public void changeEname(String name){
+        Ename = name;
+    }
 
 }
