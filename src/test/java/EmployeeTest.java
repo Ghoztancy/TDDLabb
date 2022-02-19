@@ -118,6 +118,15 @@ public class EmployeeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void checkChangeAge(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        int expected = 20;
+        emp1.changeAge();
+    }
+
 }
 
 
