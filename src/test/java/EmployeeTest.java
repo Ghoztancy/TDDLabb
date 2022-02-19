@@ -138,7 +138,13 @@ public class EmployeeTest {
         Staff.add(emp1);
 
         float expected = 33000.0f;
-        emp1.changeSalary();
+        emp1.changeSalary(33000.0f);
+
+        float actual = emp1.getSalary();
+
+        assertEquals(expected, actual);
+
+
     }
 }
 
