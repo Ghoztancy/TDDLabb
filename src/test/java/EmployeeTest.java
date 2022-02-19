@@ -63,7 +63,18 @@ public class EmployeeTest {
     }
 
 
+    @Test
+    public void checkGetEmployeeSalary(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
 
+        float expected = 28000.0f;
+
+        float actual = emp1.getSalary();
+
+
+        assertEquals(expected, actual);
+    }
 
 
 
