@@ -25,13 +25,16 @@ public class EmployeeTest {
     public void getEmployeeInfo(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         Employeein emp2  = new Employeein("Sam", "ben", 29, 23000.0f);
+
+        Staff.add(emp1);
+        Staff.add(emp2);
         String expected = "Sam";
 
 
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
-            System.out.println("fname="+employee.getFname()+"ename="+employee.getEname()+"Age="+employee.getAge()+"Salary="+employee.getSalary()+"Employeeid="+employee.getEmployeeId());
+            System.out.println(" fname= "+employee.getFname()+" ename= "+employee.getEname()+" Age= "+employee.getAge()+" Salary= "+employee.getSalary()+" Employeeid= "+employee.getEmployeeId());
         }
 
 
