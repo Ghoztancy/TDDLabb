@@ -32,7 +32,7 @@ public class EmployeeTest {
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
-            System.out.println("name="+employee.Fname());
+            System.out.println("name="+employee.getFname());
         }
 
 
