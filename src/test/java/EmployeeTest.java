@@ -9,5 +9,12 @@ public class EmployeeTest {
     static void beforeAll() {
         employee person = new employee();
     }
+
+    @Test
+    public void checkIfEmployeeIsNotNull(){
+        employee("Liban", "Abdulkadir", "4", "23000" );
+
+    }
+
 }
 
