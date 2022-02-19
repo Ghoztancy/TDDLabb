@@ -94,8 +94,11 @@ public class EmployeeTest {
         Staff.add(emp1);
 
         String newName = "Lars";
+        emp1.changeFname(newName);
 
-        changeFname()
+        String actual = emp1.getFname();
+
+
 
 
     }

@@ -38,5 +38,9 @@ public class Employeein {
         return EmployeeId;
     }
 
+    public void changeFname(String name){
+         Fname = name;
+    }
+
 
 }
