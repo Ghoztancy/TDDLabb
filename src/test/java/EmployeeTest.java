@@ -4,7 +4,7 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmpolyeeSystemContainsStaff(){
-        empolyee = new EmployeeSystem();
+        EmpolyeeSystem staff = new EmployeeSystem();
     }
 
 }
