@@ -46,4 +46,8 @@ public class Employeein {
         Ename = name;
     }
 
+    public void changeAge(int age){
+        Age = age;
+    }
+
 }
