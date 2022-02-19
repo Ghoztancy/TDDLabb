@@ -1,6 +1,9 @@
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -19,8 +22,25 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getEmployeeFname(){
-        String expectec = "lyban"
+    public void getEmployeeInfo(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Employeein emp2  = new Employeein("Sam", "ben", 29, 23000.0f);
+        String expected = "Sam";
+
+        Employeein data  = Staff.get(0);
+
+        Iterator<Employeein> itr = Staff.iterator();
+        while(itr.hasNext()){
+            Employeein employee = itr.next();
+            System.out.println("name="+employee.Fname());
+        }
+
+
+
+
+
+
+
     }
 
 

@@ -1,11 +1,11 @@
 import java.util.Random;
 
 public class Employeein {
-     String Fname;
-     String Ename;
-     int Age;
-     int EmployeeId;
-     float Salary;
+     private String Fname;
+     private String Ename;
+     private int Age;
+     private int EmployeeId;
+     private float Salary;
 
 
      public Employeein(String Fname, String Ename, int Age, float Salary){
