@@ -88,5 +88,20 @@ public class EmployeeTest {
 
     }
 
+    @Test
+    public void checkChangeFname(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        String newName = "Lars";
+
+        changeFname()
+
+
+    }
+
 }
+
+
+
 
