@@ -15,7 +15,7 @@ public class Employeein {
          this.Age = Age;
          this.Salary = Salary;
          int n = rand.nextInt(400);
-         EmployeeId = n;
+         EmployeeId = n+1;
      }
 
      public String getFname(){

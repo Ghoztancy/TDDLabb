@@ -77,6 +77,16 @@ public class EmployeeTest {
     }
 
 
+    @Test
+    public void checkIfEmployeeIdIsBetweenOneAndFourHundred(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        int actual = emp1.getEmployeeId();
+
+        assertTrue(actual < 401 & 0 < actual);
+
+    }
 
 }
 
