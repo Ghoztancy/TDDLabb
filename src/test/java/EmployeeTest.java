@@ -102,8 +102,16 @@ public class EmployeeTest {
         assertEquals(expected, actual);
 
 
+    }
 
 
+    @Test
+    public void checkChangeEname(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        String expected = "Karl";
+        emp1.changeEname();
     }
 
 }
