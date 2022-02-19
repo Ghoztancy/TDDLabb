@@ -27,12 +27,11 @@ public class EmployeeTest {
         Employeein emp2  = new Employeein("Sam", "ben", 29, 23000.0f);
         String expected = "Sam";
 
-        Employeein data  = Staff.get(0);
 
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
-            System.out.println("name="+employee.getFname());
+            System.out.println("fname="+employee.getFname(),"ename="+employee.getEname);
         }
 
 
