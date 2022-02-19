@@ -50,4 +50,8 @@ public class Employeein {
         Age = age;
     }
 
+    public void changeSalary(float salary){
+         Salary = salary;
+    }
+
 }
