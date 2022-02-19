@@ -8,7 +8,7 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmpolyeeSystemContainsStaff(){
-        Employeein lyban  = new Employeein("lyban", "Abdul", 23, 2300.0f)
+        Employeein lyban  = new Employeein("lyban", "Abdul", 23, 2300.0f);
         Staff.add(lyban);
 
 
