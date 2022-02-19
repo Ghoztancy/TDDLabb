@@ -10,12 +10,17 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmpolyeeSystemContainsStaff(){
-        Employeein lyban  = new Employeein("lyban", "Abdul", 23, 2300.0f);
-        Staff.add(lyban);
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 2300.0f);
+        Staff.add(emp1);
 
         assertTrue(Staff.size() > 0);
 
 
+    }
+
+    @Test
+    public void getEmployeeFname(){
+        String expectec = "lyban"
     }
 
 
