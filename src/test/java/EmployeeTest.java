@@ -7,6 +7,7 @@ public class EmployeeTest {
 
     @BeforeAll
     static void beforeAll() {
-        person = new employee();
+        employee person = new employee();
     }
 }
+
