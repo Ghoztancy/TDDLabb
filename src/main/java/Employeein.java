@@ -26,4 +26,8 @@ public class Employeein {
         return Ename;
     }
 
+    public int getAge(){
+        return Age;
+    }
+
 }
