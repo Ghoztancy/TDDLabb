@@ -49,6 +49,22 @@ public class EmployeeTest {
 
     }
 
+    @Test
+    public void checkGetEmployeeAge(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        int expected = 23;
+
+        int actual = emp1.getAge();
+
+
+        assertEquals(expected, actual);
+    }
+
+
+
+
 
 
 }
