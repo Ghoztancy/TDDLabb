@@ -22,5 +22,8 @@ public class Employeein {
          return Fname;
      }
 
+    public String getEname(){
+        return Ename;
+    }
 
 }
