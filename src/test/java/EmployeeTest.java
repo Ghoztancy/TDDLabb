@@ -131,6 +131,15 @@ public class EmployeeTest {
         assertEquals(expected, actual);
     }
 
+
+    @Test
+    public void checkChangeSalary(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
+
+        float expected = 33000.0f;
+        emp1.changeSalary();
+    }
 }
 
 
