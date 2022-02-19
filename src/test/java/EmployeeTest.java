@@ -93,10 +93,13 @@ public class EmployeeTest {
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         Staff.add(emp1);
 
-        String newName = "Lars";
-        emp1.changeFname(newName);
+        String expected = "Lars";
+        emp1.changeFname("Lars");
 
         String actual = emp1.getFname();
+
+
+        assertEquals(expected, actual);
 
 
 
