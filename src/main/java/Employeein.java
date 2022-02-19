@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Employeein {
      String Fname;
      String Ename;
@@ -10,8 +12,8 @@ public class Employeein {
          this.Ename = Ename;
          this.Age = Age;
          this.Salary = Salary;
+         Random rand = new Random(30000);
+         EmployeeId = rand.nextInt();
      }
-
-
 
 }
