@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Employeein {
+    Random rand = new Random();
     private String Fname;
     private String Ename;
     private int Age;
@@ -9,13 +10,12 @@ public class Employeein {
 
 
      public Employeein(String Fname, String Ename, int Age, float Salary){
-         Random rand = new Random(30000);
          this.Fname = Fname;
          this.Ename = Ename;
          this.Age = Age;
          this.Salary = Salary;
-         EmployeeId = rand.nextInt();
-
+         int n = rand.nextInt(400);
+         EmployeeId = n;
      }
 
      public String getFname(){
@@ -37,5 +37,6 @@ public class Employeein {
     public int getEmployeeId(){
         return EmployeeId;
     }
+
 
 }
