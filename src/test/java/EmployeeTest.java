@@ -26,7 +26,7 @@ public class EmployeeTest {
     public void getEmployeeInfo(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         Staff.add(emp1);
-        String expected = "sam";
+        String expected = "lyban";
 
         String actual = emp1.getFname();
 
