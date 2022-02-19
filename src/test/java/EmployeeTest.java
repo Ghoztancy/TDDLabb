@@ -124,7 +124,11 @@ public class EmployeeTest {
         Staff.add(emp1);
 
         int expected = 20;
-        emp1.changeAge();
+        emp1.changeAge(20);
+
+        int actual = emp1.getAge();
+
+        assertEquals(expected, actual);
     }
 
 }
