@@ -23,7 +23,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getEmployeeInfo(){
+    public void checkGetEmployeeFname(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         Staff.add(emp1);
         String expected = "lyban";
@@ -32,14 +32,22 @@ public class EmployeeTest {
 
         assertEquals(expected, actual);
 
+    }
 
 
+    @Test
+    public void checkGetEmployeeEname(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        Staff.add(emp1);
 
+        String expected = "Abdul";
 
+        String actual = emp1.getEname();
+
+        assertEquals(expected, actual);
 
 
     }
-
 
 
 
