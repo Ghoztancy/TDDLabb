@@ -54,7 +54,7 @@ public class EmployeeTest {
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         Staff.add(emp1);
 
-        int expected = 23;
+        int expected = 22;
 
         int actual = emp1.getAge();
 
