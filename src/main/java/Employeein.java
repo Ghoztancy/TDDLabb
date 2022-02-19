@@ -34,4 +34,8 @@ public class Employeein {
         return Salary;
     }
 
+    public int getEmployeeId(){
+        return EmployeeId;
+    }
+
 }
