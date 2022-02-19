@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -24,18 +25,12 @@ public class EmployeeTest {
     @Test
     public void getEmployeeInfo(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Employeein emp2  = new Employeein("Sam", "ben", 29, 23000.0f);
-
         Staff.add(emp1);
-        Staff.add(emp2);
-        String expected = "Sam";
+        String expected = "sam";
 
+        String actual = emp1.getFname();
 
-        Iterator<Employeein> itr = Staff.iterator();
-        while(itr.hasNext()){
-            Employeein employee = itr.next();
-            System.out.println(" fname= "+employee.getFname()+" ename= "+employee.getEname()+" Age= "+employee.getAge()+" Salary= "+employee.getSalary()+" Employeeid= "+employee.getEmployeeId());
-        }
+        assertEquals(expected, actual);
 
 
 
