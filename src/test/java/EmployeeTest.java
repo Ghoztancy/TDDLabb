@@ -12,7 +12,7 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmployeeIsNotNull(){
-        employee("Liban", "Abdulkadir", "4", "23000" );
+        new employee("Liban", "Abdulkadir",4, 23000.0f );
 
     }
 
