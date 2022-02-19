@@ -30,4 +30,8 @@ public class Employeein {
         return Age;
     }
 
+    public Float getSalary(){
+        return Salary;
+    }
+
 }

@@ -31,7 +31,7 @@ public class EmployeeTest {
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
-            System.out.println("fname="+employee.getFname()+"ename="+employee.getEname()+"Age="+employee.getAge()+"Salary="+employee.getSalary());
+            System.out.println("fname="+employee.getFname()+"ename="+employee.getEname()+"Age="+employee.getAge()+"Salary="+employee.getSalary()+"Employeeid="+employee.getEmployeeId());
         }
 
 
