@@ -167,8 +167,30 @@ public class EmployeeTest {
         assertEquals(expected, actual);
 
 
+    }
+
+
+    @Test
+    public void increaseAllEmployeeSalary(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 13, 28000.0f);
+        Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800.0f);
+        Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000.0f);
+        Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000.0f);
+        Staff.add(emp1);
+        Staff.add(emp2);
+        Staff.add(emp3);
+        Staff.add(emp4);
+
+        Iterator<Employeein> itr = Staff.iterator();
+        while(itr.hasNext()){
+            Employeein employee = itr.next();
+            float a = employee.getSalary();
+            float b = getIncreaseAmount();
+
+        }
 
     }
+
 }
 
 
