@@ -207,6 +207,31 @@ public class EmployeeTest {
 
     }
 
+    @Test
+    public void increaseSalaryForOneEmployee(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 13, 28000f);
+        Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800f);
+        Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000f);
+        Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000f);
+        Staff.add(emp1);
+        Staff.add(emp2);
+        Staff.add(emp3);
+        Staff.add(emp4);
+
+        emp3.increaseSalary(50);
+
+        float expected = 37500f;
+        float actual = emp3.getSalary();
+
+
+        assertEquals(expected, actual);
+
+
+
+
+
+    }
+
 }
 
 
