@@ -54,4 +54,12 @@ public class Employeein {
          Salary = salary;
     }
 
+    public void increaseSalary(int amount){
+         if(amount < 100 & amount > 0){
+           int a = amount + 100;
+           float b = a * 0.01f;
+           Salary = Salary * b;
+         }
+    }
+
 }

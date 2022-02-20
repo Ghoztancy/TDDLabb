@@ -184,8 +184,7 @@ public class EmployeeTest {
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
-            float a = employee.getSalary();
-            float b = getIncreaseAmount();
+            employee.increaseSalary(20);
 
         }
 
