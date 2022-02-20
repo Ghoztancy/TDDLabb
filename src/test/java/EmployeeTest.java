@@ -181,12 +181,29 @@ public class EmployeeTest {
         Staff.add(emp3);
         Staff.add(emp4);
 
+
         Iterator<Employeein> itr = Staff.iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
             employee.increaseSalary(20);
-
         }
+
+        float expected1 = 33600.0f;
+        float expected2 = 3360.0f;
+        float expected3 = 30000.0f;
+        float expected4 = 34800.0f;
+
+        float actual1 = emp1.getSalary();
+        float actual2 = emp1.getSalary();
+        float actual3 = emp1.getSalary();
+        float actual4 = emp1.getSalary();
+
+        assertEquals(expected1, actual1);
+        assertEquals(expected2, actual2);
+        assertEquals(expected3, actual3);
+        assertEquals(expected4, actual4);
+
+
 
     }
 
