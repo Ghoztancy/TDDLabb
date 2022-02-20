@@ -172,10 +172,10 @@ public class EmployeeTest {
 
     @Test
     public void increaseAllEmployeeSalary(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 13, 28000.0f);
-        Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800.0f);
-        Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000.0f);
-        Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000.0f);
+        Employeein emp1  = new Employeein("lyban", "Abdul", 13, 28000f);
+        Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800f);
+        Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000f);
+        Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000f);
         Staff.add(emp1);
         Staff.add(emp2);
         Staff.add(emp3);
@@ -188,15 +188,15 @@ public class EmployeeTest {
             employee.increaseSalary(20);
         }
 
-        float expected1 = 33600.0f;
-        float expected2 = 3360.0f;
-        float expected3 = 30000.0f;
-        float expected4 = 34800.0f;
+        float expected1 = 33600f;
+        float expected2 = 3360f;
+        float expected3 = 30000f;
+        float expected4 = 34800f;
 
         float actual1 = emp1.getSalary();
-        float actual2 = emp1.getSalary();
-        float actual3 = emp1.getSalary();
-        float actual4 = emp1.getSalary();
+        float actual2 = emp2.getSalary();
+        float actual3 = emp3.getSalary();
+        float actual4 = emp4.getSalary();
 
         assertEquals(expected1, actual1);
         assertEquals(expected2, actual2);
