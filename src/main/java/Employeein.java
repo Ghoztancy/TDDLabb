@@ -8,7 +8,6 @@ public class Employeein {
     private int EmployeeId;
     private float Salary;
 
-
      public Employeein(String Fname, String Ename, int Age, float Salary){
          this.Fname = Fname;
          this.Ename = Ename;
