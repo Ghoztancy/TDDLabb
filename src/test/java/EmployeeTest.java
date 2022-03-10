@@ -10,14 +10,16 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EmployeeTest {
 
-    private ArrayList<Employeein> Staff = new ArrayList<>();
+    // ** private ArrayList<Employeein> Staff = new ArrayList<>(); ** \\
+
+    System s = new System();
 
     @Test
     public void checkIfEmpolyeeSystemContainsStaff(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 2300.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
-        assertTrue(Staff.size() > 0);
+        assertTrue(s.getMyList().size() > 0);
 
 
     }
@@ -25,7 +27,7 @@ public class EmployeeTest {
     @Test
     public void checkGetEmployeeFname(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
         String expected = "lyban";
 
         String actual = emp1.getFname();
@@ -38,7 +40,7 @@ public class EmployeeTest {
     @Test
     public void checkGetEmployeeEname(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         String expected = "Abdul";
 
@@ -52,7 +54,7 @@ public class EmployeeTest {
     @Test
     public void checkGetEmployeeAge(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         int expected = 23;
 
@@ -66,7 +68,7 @@ public class EmployeeTest {
     @Test
     public void checkGetEmployeeSalary(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         float expected = 28000.0f;
 
@@ -80,7 +82,7 @@ public class EmployeeTest {
     @Test
     public void checkIfEmployeeIdIsBetweenOneAndFourHundred(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         int actual = emp1.getEmployeeId();
 
@@ -91,7 +93,7 @@ public class EmployeeTest {
     @Test
     public void checkChangeFname(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         String expected = "Lars";
         emp1.changeFname("Lars");
@@ -108,7 +110,7 @@ public class EmployeeTest {
     @Test
     public void checkChangeEname(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         String expected = "Karl";
         emp1.changeEname("Karl");
@@ -121,7 +123,7 @@ public class EmployeeTest {
     @Test
     public void checkChangeAge(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         int expected = 20;
         emp1.changeAge(20);
@@ -135,7 +137,7 @@ public class EmployeeTest {
     @Test
     public void checkChangeSalary(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        Staff.add(emp1);
+        s.getMyList().add(emp1);
 
         float expected = 33000.0f;
         emp1.changeSalary(33000.0f);
@@ -152,16 +154,16 @@ public class EmployeeTest {
         Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800.0f);
         Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000.0f);
         Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000.0f);
-        Staff.add(emp1);
-        Staff.add(emp2);
-        Staff.add(emp3);
-        Staff.add(emp4);
+        s.getMyList().add(emp1);
+        s.getMyList().add(emp2);
+        s.getMyList().add(emp3);
+        s.getMyList().add(emp4);
 
 
-        Staff.remove(emp3);
+        s.getMyList().remove(emp3);
 
         int expected = 3;
-        int actual = Staff.size();
+        int actual = s.getMyList().size();
 
 
         assertEquals(expected, actual);
@@ -176,13 +178,13 @@ public class EmployeeTest {
         Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800f);
         Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000f);
         Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000f);
-        Staff.add(emp1);
-        Staff.add(emp2);
-        Staff.add(emp3);
-        Staff.add(emp4);
+        s.getMyList().add(emp1);
+        s.getMyList().add(emp2);
+        s.getMyList().add(emp3);
+        s.getMyList().add(emp4);
 
 
-        Iterator<Employeein> itr = Staff.iterator();
+        Iterator<Employeein> itr = s.getMyList().iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
             employee.increaseSalary(20);
@@ -213,10 +215,10 @@ public class EmployeeTest {
         Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800f);
         Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000f);
         Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000f);
-        Staff.add(emp1);
-        Staff.add(emp2);
-        Staff.add(emp3);
-        Staff.add(emp4);
+        s.getMyList().add(emp1);
+        s.getMyList().add(emp2);
+        s.getMyList().add(emp3);
+        s.getMyList().add(emp4);
 
         emp3.increaseSalary(50);
 
