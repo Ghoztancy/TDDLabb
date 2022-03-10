@@ -1,19 +1,19 @@
-import java.util.Random;
-
 public class Employeein {
-    Random rand = new Random();
+    System r = new System();
     private String Fname;
     private String Ename;
     private int Age;
     private int EmployeeId;
     private float Salary;
 
+
+
      public Employeein(String Fname, String Ename, int Age, float Salary){
          this.Fname = Fname;
          this.Ename = Ename;
          this.Age = Age;
          this.Salary = Salary;
-         int n = rand.nextInt(400);
+         int n = r.newId();
          EmployeeId = n+1;
      }
 
@@ -53,6 +53,14 @@ public class Employeein {
          Salary = salary;
     }
 
-
+    public void increaseSalary(double amount){
+         if(amount < 100 & amount > 0){
+           double a = amount + 100;
+           double b = a * 0.01;
+           double c = (double)Salary;
+           double d = c * b;
+           Salary = (float)d;
+         }
+    }
 
 }

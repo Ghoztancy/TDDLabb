@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class EmployeeTest {
@@ -20,7 +19,6 @@ public class EmployeeTest {
         s.getMyList().add(emp1);
 
         assertTrue(s.getMyList().size() > 0);
-
 
     }
 
@@ -80,13 +78,13 @@ public class EmployeeTest {
 
 
     @Test
-    public void checkIfEmployeeIdIsBetweenOneAndFourHundred(){
+    public void checkIfEmployeeIdIsNotNull(){
         Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
         s.getMyList().add(emp1);
 
         int actual = emp1.getEmployeeId();
 
-        assertTrue(actual < 401 & 0 < actual);
+        assertNotNull(actual);
 
     }
 
@@ -184,11 +182,7 @@ public class EmployeeTest {
         s.getMyList().add(emp4);
 
 
-        Iterator<Employeein> itr = s.getMyList().iterator();
-        while(itr.hasNext()){
-            Employeein employee = itr.next();
-            employee.increaseSalary(20);
-        }
+        s.increaseSalary(20);
 
         float expected1 = 33600f;
         float expected2 = 3360f;
