@@ -15,8 +15,7 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmpolyeeSystemContainsStaff(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 2300.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         assertTrue(s.getMyList().size() > 0);
 
@@ -24,11 +23,10 @@ public class EmployeeTest {
 
     @Test
     public void checkGetEmployeeFname(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
         String expected = "lyban";
 
-        String actual = emp1.getFname();
+        String actual = s.getMyList().get(0).getFname();
 
         assertEquals(expected, actual);
 
@@ -37,12 +35,11 @@ public class EmployeeTest {
 
     @Test
     public void checkGetEmployeeEname(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         String expected = "Abdul";
 
-        String actual = emp1.getEname();
+        String actual = s.getMyList().get(0).getEname();
 
         assertEquals(expected, actual);
 
@@ -51,10 +48,9 @@ public class EmployeeTest {
 
     @Test
     public void checkIfEmployeeIdIsNotNull(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
-        int actual = emp1.getEmployeeId();
+        int actual = s.getMyList().get(0).getEmployeeId();
 
         assertNotNull(actual);
 
@@ -62,13 +58,12 @@ public class EmployeeTest {
 
     @Test
     public void checkChangeFname() {
-        Employeein emp1 = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         String expected = "Lars";
-        emp1.changeFname("Lars");
+        s.getMyList().get(0).changeFname("Lars");
 
-        String actual = emp1.getFname();
+        String actual = s.getMyList().get(0).getFname();
 
 
         assertEquals(expected, actual);
@@ -98,12 +93,11 @@ public class EmployeeTest {
 
     @Test
     public void checkGetEmployeeAge(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 23, 28000f);
 
         int expected = 23;
 
-        int actual = emp1.getAge();
+        int actual = s.getMyList().get(0).getAge();
 
 
         assertEquals(expected, actual);
@@ -112,12 +106,11 @@ public class EmployeeTest {
 
     @Test
     public void checkGetEmployeeSalary(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         float expected = 28000.0f;
 
-        float actual = emp1.getSalary();
+        float actual = s.getMyList().get(0).getSalary();
 
 
         assertEquals(expected, actual);
@@ -126,26 +119,24 @@ public class EmployeeTest {
 
     @Test
     public void checkChangeEname(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         String expected = "Karl";
-        emp1.changeEname("Karl");
+        s.getMyList().get(0).changeEname("Karl");
 
-        String actual = emp1.getEname();
+        String actual = s.getMyList().get(0).getEname();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void checkChangeAge(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         int expected = 20;
-        emp1.changeAge(20);
+        s.getMyList().get(0).changeAge(20);
 
-        int actual = emp1.getAge();
+        int actual = s.getMyList().get(0).getAge();
 
         assertEquals(expected, actual);
     }
@@ -153,13 +144,12 @@ public class EmployeeTest {
 
     @Test
     public void checkChangeSalary(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
-        s.getMyList().add(emp1);
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
 
         float expected = 33000.0f;
-        emp1.changeSalary(33000.0f);
+        s.getMyList().get(0).changeSalary(33000.0f);
 
-        float actual = emp1.getSalary();
+        float actual = s.getMyList().get(0).getSalary();
 
         assertEquals(expected, actual);
 
@@ -169,15 +159,10 @@ public class EmployeeTest {
 
     @Test
     public void increaseAllEmployeeSalary(){
-        Employeein emp1  = new Employeein("lyban", "Abdul", 13, 28000f);
-        Employeein emp2  = new Employeein("ben", "Abdul", 29, 2800f);
-        Employeein emp3  = new Employeein("Steve", "Abdul", 43, 25000f);
-        Employeein emp4  = new Employeein("Karl", "Abdul", 26, 29000f);
-        s.getMyList().add(emp1);
-        s.getMyList().add(emp2);
-        s.getMyList().add(emp3);
-        s.getMyList().add(emp4);
-
+        s.addEmployee("lyban", "Abdul", 13, 28000f);
+        s.addEmployee("ben", "Abdul", 29, 2800f);
+        s.addEmployee("Steve", "Abdul", 43, 25000f);
+        s.addEmployee("Karl", "Abdul", 26, 29000f);
 
         s.increaseSalaryEveryOne(20);
 
@@ -186,10 +171,10 @@ public class EmployeeTest {
         float expected3 = 30000f;
         float expected4 = 34800f;
 
-        float actual1 = emp1.getSalary();
-        float actual2 = emp2.getSalary();
-        float actual3 = emp3.getSalary();
-        float actual4 = emp4.getSalary();
+        float actual1 = s.getMyList().get(0).getSalary();
+        float actual2 = s.getMyList().get(1).getSalary();
+        float actual3 = s.getMyList().get(2).getSalary();
+        float actual4 = s.getMyList().get(3).getSalary();
 
         assertEquals(expected1, actual1);
         assertEquals(expected2, actual2);
@@ -207,7 +192,7 @@ public class EmployeeTest {
         s.addEmployee("Steve", "Abdul", 43, 25000f);
         s.addEmployee("Karl", "Abdul", 26, 29000f);
 
-        s.increaseSalaryForOne(2);
+        s.increaseSalaryForOne(2, 50);
 
         float expected = 37500f;
         float actual = s.getMyList().get(2).getSalary();

@@ -27,8 +27,8 @@ public class System {
         return uniqueInt;
     }
 
-    public void increaseSalaryForOne(int a ){
-        Staff.get(a).increaseSalary(50);
+    public void increaseSalaryForOne(int a, int amount){
+        Staff.get(a).increaseSalary(amount);
 
     }
 
