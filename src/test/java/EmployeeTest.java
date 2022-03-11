@@ -76,6 +76,20 @@ public class EmployeeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void checkRemovedEmployee(){
+        Employeein emp1  = new Employeein("lyban", "Abdul", 23, 28000.0f);
+        s.getMyList().add(emp1);
+
+        s.removeEmployee(0);
+
+        int expected = 0;
+
+        int actual = s.getMyList().toArray().length;
+
+        assertEquals(expected,actual);
+    }
+
 
     @Test
     public void checkIfEmployeeIdIsNotNull(){

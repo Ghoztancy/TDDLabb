@@ -9,6 +9,17 @@ public class System {
         return Staff;
     }
 
+
+
+
+
+
+    public void removeEmployee(int index){
+        Staff.remove(index);
+    }
+
+
+
     public int newId(){
         uniqueInt = uniqueInt + 1;
         return uniqueInt;

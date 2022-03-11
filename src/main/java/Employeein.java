@@ -13,8 +13,7 @@ public class Employeein {
          this.Ename = Ename;
          this.Age = Age;
          this.Salary = Salary;
-         int n = r.newId();
-         EmployeeId = n+1;
+         EmployeeId = r.newId();
      }
 
      public String getFname(){
