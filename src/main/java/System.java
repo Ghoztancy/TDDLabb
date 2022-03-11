@@ -11,7 +11,9 @@ public class System {
 
 
 
-
+    public void addEmployee(String name, String ename, int age, float salary){
+         Staff.add(new Employeein(name,ename,age,salary));
+    }
 
 
     public void removeEmployee(int index){
@@ -25,8 +27,13 @@ public class System {
         return uniqueInt;
     }
 
+    public void increaseSalaryForOne(int a ){
+        Staff.get(a).increaseSalary(50);
 
-    public void increaseSalary(int a){
+    }
+
+
+    public void increaseSalaryEveryOne(int a){
         Iterator<Employeein> itr = getMyList().iterator();
         while(itr.hasNext()){
             Employeein employee = itr.next();
